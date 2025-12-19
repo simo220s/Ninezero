@@ -1,0 +1,7 @@
+export { default as AdminDashboard } from './components/AdminDashboard'
+export { default as AdminOverview } from './components/AdminOverview'
+export { default as UserManagement } from './components/UserManagement'
+export { default as ClassManagement } from './components/ClassManagement'
+export { default as CreditManagement } from './components/CreditManagement'
+export { default as ReviewManagement } from './components/ReviewManagement'
+export { default as SystemSettings } from './components/SystemSettings'
