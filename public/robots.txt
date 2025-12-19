@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# Disallow private areas
+Disallow: /dashboard/
+Disallow: /book-trial
+Disallow: /book-regular
+Disallow: /reset-password
+
+# Allow important pages
+Allow: /
+Allow: /signup
+Allow: /login
+Allow: /about
+Allow: /pricing
+Allow: /contact
+
+# Sitemap location
+Sitemap: https://saudienglishclub.com/sitemap.xml
+
+# Crawl delay (be respectful)
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2

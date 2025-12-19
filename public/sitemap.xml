@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
+  <url>
+    <loc>https://saudienglishclub.com/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudienglishclub.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudienglishclub.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saudienglishclub.com/" />
+  </url>
+  
+  <!-- Arabic Homepage -->
+  <url>
+    <loc>https://saudienglishclub.com/ar/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudienglishclub.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudienglishclub.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saudienglishclub.com/" />
+  </url>
+  
+  <!-- English Homepage -->
+  <url>
+    <loc>https://saudienglishclub.com/en/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudienglishclub.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudienglishclub.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://saudienglishclub.com/" />
+  </url>
+  
+  <!-- Signup Pages -->
+  <url>
+    <loc>https://saudienglishclub.com/signup</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudienglishclub.com/ar/signup" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudienglishclub.com/en/signup" />
+  </url>
+  
+  <url>
+    <loc>https://saudienglishclub.com/ar/signup</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudienglishclub.com/ar/signup" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudienglishclub.com/en/signup" />
+  </url>
+  
+  <url>
+    <loc>https://saudienglishclub.com/en/signup</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudienglishclub.com/ar/signup" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudienglishclub.com/en/signup" />
+  </url>
+  
+  <!-- Login Pages -->
+  <url>
+    <loc>https://saudienglishclub.com/login</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudienglishclub.com/ar/login" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudienglishclub.com/en/login" />
+  </url>
+  
+  <!-- About Teacher Ahmad -->
+  <url>
+    <loc>https://saudienglishclub.com/about</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudienglishclub.com/ar/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudienglishclub.com/en/about" />
+  </url>
+  
+  <!-- Pricing -->
+  <url>
+    <loc>https://saudienglishclub.com/pricing</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudienglishclub.com/ar/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudienglishclub.com/en/pricing" />
+  </url>
+  
+  <!-- Contact -->
+  <url>
+    <loc>https://saudienglishclub.com/contact</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://saudienglishclub.com/ar/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://saudienglishclub.com/en/contact" />
+  </url>
+  
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://saudienglishclub.com/privacy</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://saudienglishclub.com/terms</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

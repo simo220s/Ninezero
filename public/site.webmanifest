@@ -1,0 +1,42 @@
+{
+  "name": "نادي السعودية للغة الإنجليزية",
+  "short_name": "Saudi English Club",
+  "description": "تعلم اللغة الإنجليزية مع الأستاذ أحمد، معلم معتمد من جامعة أريزونا",
+  "icons": [
+    {
+      "src": "/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["education", "learning", "language"],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "375x812",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

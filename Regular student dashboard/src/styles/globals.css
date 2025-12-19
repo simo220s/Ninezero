@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --primary-blue: #3B82F6;
+  --primary-blue-light: #DBEAFE;
+  --primary-blue-dark: #2563EB;
+  --background: #FFFFFF;
+  --surface: #F9FAFB;
+  --border-light: #E5E7EB;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cairo', 'Noto Kufi Arabic', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--surface);
+  overscroll-behavior: none;
+}
+
+/* iOS-style smooth scrolling */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* iOS-style tap highlight */
+button, a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+}
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+.arabic-text {
+  font-family: 'Cairo', 'Noto Kufi Arabic', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #f0f0f0 4%, #e0e0e0 25%, #f0f0f0 36%);
+  background-size: 1000px 100%;
+}
