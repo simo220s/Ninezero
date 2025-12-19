@@ -1,0 +1,448 @@
+/**
+ * Modern CSS Reset and Global Styles
+ * LMS Dashboard - UI/UX Harmonization
+ * 
+ * @version 1.0.0
+ * @description Provides consistent baseline styles across browsers
+ */
+
+/* ============================================
+   CSS Reset - Modern Baseline
+   ============================================ */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root element */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 16px; /* Base font size */
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  font-family: var(--font-family-sans, 'Cairo', 'Noto Kufi Arabic', system-ui, sans-serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text-primary, #111827);
+  background-color: var(--color-surface-base, #ffffff);
+  overflow-x: hidden;
+}
+
+/* ============================================
+   RTL Support
+   ============================================ */
+
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="ltr"] {
+  text-align: left;
+  direction: ltr;
+}
+
+/* RTL-specific adjustments */
+[dir="rtl"] body {
+  font-family: 'Cairo', 'Noto Kufi Arabic', sans-serif;
+  line-height: 1.8; /* Better for Arabic text */
+}
+
+/* ============================================
+   Typography Reset
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ============================================
+   Form Elements Reset
+   ============================================ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+  background-color: transparent;
+  background-image: none;
+  cursor: pointer;
+}
+
+button:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input,
+textarea,
+select {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Remove spinner from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* ============================================
+   List Reset
+   ============================================ */
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   Media Elements
+   ============================================ */
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  border-style: none;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+/* ============================================
+   Table Reset
+   ============================================ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0;
+  text-align: inherit;
+}
+
+/* ============================================
+   Focus Styles
+   ============================================ */
+
+/* Remove default focus outline */
+*:focus {
+  outline: none;
+}
+
+/* Add visible focus indicator for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-600, #2563eb);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Focus within for containers */
+*:focus-within {
+  /* Reserved for custom focus indicators */
+}
+
+/* ============================================
+   Selection Styles
+   ============================================ */
+
+::selection {
+  background-color: var(--color-primary-200, #bfdbfe);
+  color: var(--color-text-primary, #111827);
+}
+
+::-moz-selection {
+  background-color: var(--color-primary-200, #bfdbfe);
+  color: var(--color-text-primary, #111827);
+}
+
+/* ============================================
+   Scrollbar Styles (Webkit)
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-gray-100, #f3f4f6);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-400, #9ca3af);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-gray-500, #6b7280);
+}
+
+/* ============================================
+   Accessibility - Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   Accessibility - High Contrast Mode
+   ============================================ */
+
+@media (prefers-contrast: high) {
+  :root {
+    --color-text-primary: #000000;
+    --color-surface-base: #ffffff;
+    --color-border-medium: #000000;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Not screen reader only */
+.not-sr-only {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary-600, #2563eb);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  z-index: 9999;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* ============================================
+   Dark Mode Support (Prepared)
+   ============================================ */
+
+.dark {
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #d1d5db;
+  --color-surface-base: #0f172a;
+  --color-surface-elevated: #1e293b;
+  --color-border-light: #334155;
+  --color-border-medium: #475569;
+}
+
+/* ============================================
+   Loading State
+   ============================================ */
+
+.loading {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* ============================================
+   Disabled State
+   ============================================ */
+
+[disabled],
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   Transitions
+   ============================================ */
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+/* ============================================
+   Arabic Text Optimization
+   ============================================ */
+
+.arabic-text {
+  font-family: 'Cairo', 'Noto Kufi Arabic', sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+.arabic-heading {
+  font-family: 'Cairo', 'Noto Kufi Arabic', sans-serif;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+/* ============================================
+   Container Query Support (Future-proofing)
+   ============================================ */
+
+@supports (container-type: inline-size) {
+  .container-query {
+    container-type: inline-size;
+  }
+}
+
+
