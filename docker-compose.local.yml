@@ -1,0 +1,106 @@
+version: '3.8'
+
+# ============================================
+# Local Development Docker Compose
+# ============================================
+# This configuration is optimized for local development
+# with hot reload and debugging capabilities
+#
+# Usage:
+#   docker-compose -f docker-compose.local.yml up
+# ============================================
+
+services:
+  # Backend API (Development)
+  api:
+    build:
+      context: ./auth-backend
+      dockerfile: Dockerfile.dev
+    container_name: saudi-english-club-api-dev
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+      - "9229:9229"  # Node.js debugger port
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    env_file:
+      - ./auth-backend/.env
+    volumes:
+      # Mount source code for hot reload
+      - ./auth-backend/src:/app/src:ro
+      - ./auth-backend/migrations:/app/migrations:ro
+      - ./auth-backend/scripts:/app/scripts:ro
+      - ./auth-backend/logs:/app/logs
+      # Exclude node_modules from mount
+      - /app/node_modules
+    networks:
+      - app-network
+    command: npm run dev
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend (Development with Vite)
+  frontend:
+    image: node:18-alpine
+    container_name: saudi-english-club-frontend-dev
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - ./.env
+    volumes:
+      # Mount source code for hot reload
+      - ./src:/app/src:ro
+      - ./public:/app/public:ro
+      - ./index.html:/app/index.html:ro
+      - ./package.json:/app/package.json:ro
+      - ./vite.config.ts:/app/vite.config.ts:ro
+      - ./tsconfig.json:/app/tsconfig.json:ro
+      - ./tsconfig.node.json:/app/tsconfig.node.json:ro
+      - ./tailwind.config.js:/app/tailwind.config.js:ro
+      - ./postcss.config.js:/app/postcss.config.js:ro
+      # Exclude node_modules from mount
+      - /app/node_modules
+    networks:
+      - app-network
+    depends_on:
+      - api
+    command: sh -c "npm install && npm run dev -- --host"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:5173"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+  # Redis (Optional - for caching and rate limiting)
+  redis:
+    image: redis:7-alpine
+    container_name: saudi-english-club-redis-dev
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - app-network
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+volumes:
+  redis-data:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge
